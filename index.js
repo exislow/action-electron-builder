@@ -133,7 +133,7 @@ const runAction = () => {
 				/*`${useNpm ? "npx --no-install" : "yarn run"} ${cmd} --${platform} ${
 					release ? "--publish always" : ""
 				} ${args}`*/
-				`quasar build -m electron`,
+				`${useNpm ? "npx --no-install" : "yarn run"} quasar build -m electron`,
 				appRoot,
 			);
 			break;
