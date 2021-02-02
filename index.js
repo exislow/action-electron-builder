@@ -130,9 +130,10 @@ const runAction = () => {
 	for (let i = 0; i < maxAttempts; i += 1) {
 		try {
 			run(
-				`${useNpm ? "npx --no-install" : "yarn run"} ${cmd} --${platform} ${
+				/*`${useNpm ? "npx --no-install" : "yarn run"} ${cmd} --${platform} ${
 					release ? "--publish always" : ""
-				} ${args}`,
+				} ${args}`*/
+				`quasar build -m electron`,
 				appRoot,
 			);
 			break;
